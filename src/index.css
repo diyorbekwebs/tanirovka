@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 * {
   padding: 0;
   margin: 0;
@@ -8,8 +9,60 @@
   text-decoration: none;
   list-style: none;
 }
+body{
+  overflow-x: hidden;
+}
+/* Scrollbar uchun rang o'zgartirish */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scrollbar tracki (asosiy fon) */
+::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+/* Scrollbarning tugmasi (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #FF8A00;
+  border-radius: 0px;
+  border: 2px solid #000000;
+}
+
 .container {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.call-button {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  padding: 20px 20px;
+  background-color: #FF8A00;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000;
+  animation: bounce 2s infinite;
+  box-shadow: 0px 0px 30px rgb(255, 94, 0); /* Soya qo'shish */
+  transition: box-shadow 0.3s ease; /* Cheksiz qalqish effekti */
+}
+
+.call-button:hover {
+  background-color: #e67e00;
 }

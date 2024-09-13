@@ -11,7 +11,12 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-cursor": "^2.0.15",
+    "react-cursor-follow": "^2.0.0",
+    "react-dom": "^18.3.1",
+    "react-fast-marquee": "^1.6.5",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
