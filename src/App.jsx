@@ -1,29 +1,28 @@
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import Hero from "./components/hero/hero";
-import About from "./components/about/about";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/home";
+import Layout from "./Layout/layout";
 import Cursor from "react-cursor-follow";
-import Fixthings from "./components/fixthings/Fixthings";
-import Slide1 from './components/Slide1/Slide';
-import Slide2 from "./components/Slide2/Slide2";
-import Collection from "./components/collections/collection";
+import Fitting from "./pages/fitting/Fitting";
+import Precut from "./pages/precut/Precut";
+import Window from "./pages/window/Window";
+import Paint from "./pages/paint/Paint";
 
-export default function App() {
+function App() {
   return (
-    <div>
-      <Cursor
-        size={50}
-        color="#FF8A00"
-        hollow={true} // Ushbu parametr kursorni ichi bo‘sh qiladi
-      />
-      <Fixthings />
-      <Header />
-      <Hero />
-      <About />
-      <Slide1 />
-      <Slide2/>
-      <Collection />
-      <Footer />
-    </div>
+    <>
+      <Cursor size={50} color="#0073ff" hollow={true} />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="fitting" element={<Fitting />} />
+          <Route path="precut" element={<Precut />} />
+          <Route path="window" element={<Window />} />
+          <Route path="paint" element={<Paint />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
+
+export default App;
+  

@@ -9,7 +9,7 @@ function Slide2() {
     slidesToScroll: 1,
   };
   return (
-    <div className="py-[30px] bg-[black]">
+    <div className="py-[30px] bg-[#ffff]">
       <Slider {...settings}>
         <div className="w-[100%] h-[80vh] bg-[#292828]"></div>
         <div className="w-[100%] h-[80vh] bg-[#292828]"></div>

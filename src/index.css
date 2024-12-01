@@ -8,34 +8,44 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  /* cursor:none; */
 }
-body{
+body {
   overflow-x: hidden;
 }
 /* Scrollbar uchun rang o'zgartirish */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 }
 
 /* Scrollbar tracki (asosiy fon) */
 ::-webkit-scrollbar-track {
-  background: #1b1b1b;
+  background: #ffffff;
 }
 
 /* Scrollbarning tugmasi (thumb) */
 ::-webkit-scrollbar-thumb {
-  background-color: #FF8A00;
+  background-color: transparent;
   border-radius: 0px;
-  border: 2px solid #000000;
+  border: 0px solid;
+  overflow: hidden;
 }
-
+.hero {
+  background-image: url("./assets/image/window.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .container {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -51,7 +61,7 @@ body{
   bottom: 40px;
   left: 40px;
   padding: 20px 20px;
-  background-color: #FF8A00;
+  background-color: #ff8a00;
   color: #fff;
   border: none;
   border-radius: 50px;
@@ -65,4 +75,9 @@ body{
 
 .call-button:hover {
   background-color: #e67e00;
+}
+
+.logo {
+  height: 90px;
+  
 }
