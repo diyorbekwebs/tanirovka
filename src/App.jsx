@@ -6,10 +6,12 @@ import Fitting from "./pages/fitting/Fitting";
 import Precut from "./pages/precut/Precut";
 import Window from "./pages/window/Window";
 import Paint from "./pages/paint/Paint";
+import ScrollToTop from "./scrolltop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Cursor size={50} color="#0073ff" hollow={true} />
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -25,4 +27,3 @@ function App() {
 }
 
 export default App;
-  

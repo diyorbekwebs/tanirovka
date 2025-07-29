@@ -4,25 +4,25 @@ import { Pro1, Pro2, Pro3, Pro4 } from "../../assets/image/img";
 export const category = [
   {
     id: 1,
-    name: "Pre Cut Window Tint",
+    name: "Window Tinting",
     path: "precut",
     img: Pro1,
   },
   {
     id: 2,
-    name: "Window Tint Rolls",
+    name: "Sun Protection Films",
     path: "window",
     img: Pro2,
   },
-  {
-    id: 3,
-    name: "Fitting Tools",
-    path: "fitting",
-    img: Pro3,
-  },
+  // {
+  //   id: 3,
+  //   name: "Fitting Tools",
+  //   path: "fitting",
+  //   img: Pro3,
+  // },
   {
     id: 4,
-    name: "Paint Protection Film",
+    name: "Paint Protection Films",
     path: "paint",
     img: Pro4,
   },

@@ -45,13 +45,16 @@ export default function Header() {
                 />
               </li>
             </Link>
-            <li className="icon">
-              <img
-                className="w-[20px] text-[#ffff]"
-                src={Facebook}
-                alt="Facebook"
-              />
-            </li>
+            <Link to="https://www.facebook.com/profile.php?id=61578331648696" target="_blank">
+              <li className="icon">
+                <img
+                  className="w-[20px] text-[#ffff]"
+                  src={Facebook}
+                  alt="Facebook"
+                />
+              </li>
+            </Link>
+
             <Link
               to={"https://www.instagram.com/x99pro_uzbekistan/"}
               target="_blank"
