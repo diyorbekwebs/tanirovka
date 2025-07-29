@@ -31,9 +31,10 @@ body {
   overflow: hidden;
 }
 .hero {
-  background-image: url("./assets/image/window.jpg");
+  background-image: url("./assets/image/slide/sl6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 .container {
   width: 100%;

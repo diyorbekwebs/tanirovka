@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <div className="bg-gradient-to-br from-[#001F3F] to-[#0073ff] text-white py-20">
-      <div className="container mx-auto px-6 lg:px-20">
+    <div className="bg-gradient-to-br w-full h-full from-[#001F3F] to-[#0073ff] text-white py-20 hero">
+      {/* <div className="container mx-auto px-6 lg:px-20">
         <div className="flex flex-col items-start justify-center min-h-[80vh] gap-10">
           
           <h1 className="text-4xl lg:text-6xl font-bold max-w-4xl leading-tight">
@@ -17,7 +17,7 @@ export default function Hero() {
             See Catalogue
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
