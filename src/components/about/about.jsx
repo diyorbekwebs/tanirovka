@@ -32,9 +32,9 @@ const sections = [
 
 export default function About() {
   return (
-    <div className="bg-white pt-[50px] pb-[150px]">
-      <div className="container">
-        <div className="flex flex-col gap-[100px]">
+    <div className="bg-white pt-[50px] pb-[100px]">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col gap-[80px]">
           {sections.map((section, index) => (
             <motion.div
               key={index}
@@ -42,25 +42,24 @@ export default function About() {
               whileInView="visible"
               viewport={{ amount: 0.5 }}
               variants={animationVariants}
-              className={`flex ${
-                section.reverse ? "flex-row-reverse" : ""
-              } justify-between items-center`}
+              className={`flex flex-col-reverse ${section.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+                } justify-between items-center gap-8`}
             >
               <img
                 src={section.image}
                 alt="about section"
-                className="w-[600px] rounded-[15px] h-[460px] shadow-xl object-cover"
+                className="w-full sm:w-[500px] md:w-[600px] rounded-[15px] h-[300px] sm:h-[400px] md:h-[460px] shadow-xl object-cover"
               />
-              <div className="flex flex-col gap-[20px] max-w-[600px]">
-                <h3 className="text-[#1c1c1c] mb-[10px] text-[34px] font-[700] leading-[1.2]">
+              <div className="flex flex-col gap-[20px] max-w-[600px] text-center lg:text-left">
+                <h3 className="text-[#1c1c1c] text-[28px] sm:text-[32px] lg:text-[34px] font-bold leading-snug">
                   {section.title}
                 </h3>
-                <p className="text-[#4a4a4a] text-[16px] font-[400] leading-[1.6]">
+                <p className="text-[#4a4a4a] text-[15px] sm:text-[16px] font-[400] leading-[1.6]">
                   {section.description}
                 </p>
                 <a
-                  href="#contact"
-                  className="text-[14px] font-[600] text-white bg-[#0073ff] px-[24px] py-[12px] rounded-[8px] w-fit hover:bg-[#005acc] transition"
+                  href="tel:+998994444835"
+                  className="text-[14px] font-[600] text-white bg-[#0073ff] px-[24px] py-[12px] rounded-[8px] w-fit mx-auto lg:mx-0 hover:bg-[#005acc] transition"
                 >
                   Contact Us
                 </a>
