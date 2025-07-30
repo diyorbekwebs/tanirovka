@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // yoki boshqa icon kutubxonasi
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Card({ images = [], name, sizes = [] }) {
   const [showAll, setShowAll] = useState(false);
@@ -28,11 +28,9 @@ export default function Card({ images = [], name, sizes = [] }) {
 
   const slideTo = (index) => {
     if (index === currentImgIndex) return;
-
     setDirection(index > currentImgIndex ? "left" : "right");
     setNextImgIndex(index);
     setIsSliding(true);
-
     setTimeout(() => {
       setCurrentImgIndex(index);
       setIsSliding(false);
@@ -50,7 +48,7 @@ export default function Card({ images = [], name, sizes = [] }) {
   };
 
   return (
-    <div className="w-[420px] min-h-[500px] border rounded-[15px] bg-[#f5f5f5] p-[20px] flex flex-col items-center gap-[15px]">
+    <article className="w-[420px] min-h-[500px] border rounded-[15px] bg-[#f5f5f5] p-[20px] flex flex-col items-center gap-[15px]">
       {/* Image Slider */}
       <div
         className="relative w-full h-[280px] overflow-hidden rounded-xl"
@@ -61,25 +59,26 @@ export default function Card({ images = [], name, sizes = [] }) {
         {isSliding && (
           <img
             src={images[currentImgIndex]}
-            className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-400 ${
+            alt={`${name} image ${currentImgIndex + 1}`}
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 ${
               direction === "left" ? "-translate-x-full" : "translate-x-full"
             }`}
-            alt="prev"
           />
         )}
 
         {/* New image */}
         <img
           src={images[isSliding ? nextImgIndex : currentImgIndex]}
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-400`}
-          alt="current"
+          alt={`${name} image ${isSliding ? nextImgIndex + 1 : currentImgIndex + 1}`}
+          className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500"
         />
 
         {/* Dots */}
         <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
           {images.map((_, index) => (
             <button
-              key={index}
+              key={`dot-${index}`}
+              aria-label={`Go to image ${index + 1}`}
               onClick={() => slideTo(index)}
               className={`w-[10px] h-[10px] rounded-full transition ${
                 currentImgIndex === index && !isSliding
@@ -92,12 +91,14 @@ export default function Card({ images = [], name, sizes = [] }) {
 
         {/* Arrows */}
         <button
+          aria-label="Previous image"
           onClick={handlePrev}
           className="absolute left-2 top-1/2 -translate-y-1/2 bg-black text-white opacity-10 hover:opacity-100 p-2 rounded-full z-20 transition"
         >
           <ChevronLeft size={24} />
         </button>
         <button
+          aria-label="Next image"
           onClick={handleNext}
           className="absolute right-2 top-1/2 -translate-y-1/2 bg-black text-white opacity-10 hover:opacity-100 p-2 rounded-full z-20 transition"
         >
@@ -105,21 +106,26 @@ export default function Card({ images = [], name, sizes = [] }) {
         </button>
       </div>
 
+      {/* Product Name */}
       <h2 className="text-xl font-semibold text-red-600 text-center">{name}</h2>
 
-      <div className="w-full text-sm text-gray-700 flex flex-col gap-[5px]">
+      {/* Sizes */}
+      <ul className="w-full text-sm text-gray-700 flex flex-col gap-[5px]" aria-label="Product sizes">
         {visibleSizes.map((size, index) => (
-          <p key={index}>{size}</p>
+          <li key={`size-${index}`}>{size}</li>
         ))}
-        {sizes.length > 4 && (
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="text-blue-600 hover:underline mt-1 w-fit"
-          >
-            {showAll ? "Yashirish" : "Yana ko‘rsatish"}
-          </button>
-        )}
-      </div>
-    </div>
+      </ul>
+
+      {/* Show more */}
+      {sizes.length > 4 && (
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="text-blue-600 hover:underline mt-1 w-fit"
+          aria-label={showAll ? "Hide additional sizes" : "Show all sizes"}
+        >
+          {showAll ? "Yashirish" : "Yana ko‘rsatish"}
+        </button>
+      )}
+    </article>
   );
 }

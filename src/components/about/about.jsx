@@ -13,6 +13,7 @@ const sections = [
     description:
       "Experience the thrill of exploration with our premium off-road vehicles. Whether you crave the wilderness or the dunes, we've got your ride.",
     reverse: false,
+    alt: "Off-road vehicle in wilderness",
   },
   {
     image: Windowtint2,
@@ -20,6 +21,7 @@ const sections = [
     description:
       "Our fleet is designed to handle extreme conditions. From rocky paths to desert sands, drive with confidence and style.",
     reverse: true,
+    alt: "Vehicle crossing a rocky terrain",
   },
   {
     image: Windowtint,
@@ -27,16 +29,18 @@ const sections = [
     description:
       "Take control of your journey with reliable, adventure-ready vehicles. We're here to power your next escape.",
     reverse: false,
+    alt: "Adventure-ready SUV on a dirt road",
   },
 ];
 
 export default function About() {
   return (
-    <div className="bg-white pt-[50px] pb-[100px]">
+    <section className="bg-white pt-[50px] pb-[100px]" aria-labelledby="about-heading">
       <div className="container mx-auto px-4">
+        <h2 id="about-heading" className="sr-only">About Our Vehicles</h2>
         <div className="flex flex-col gap-[80px]">
           {sections.map((section, index) => (
-            <motion.div
+            <motion.article
               key={index}
               initial="hidden"
               whileInView="visible"
@@ -44,10 +48,12 @@ export default function About() {
               variants={animationVariants}
               className={`flex flex-col-reverse ${section.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
                 } justify-between items-center gap-8`}
+              aria-label={section.title}
             >
               <img
                 src={section.image}
-                alt="about section"
+                alt={section.alt}
+                loading="lazy"
                 className="w-full sm:w-[500px] md:w-[600px] rounded-[15px] h-[300px] sm:h-[400px] md:h-[460px] shadow-xl object-cover"
               />
               <div className="flex flex-col gap-[20px] max-w-[600px] text-center lg:text-left">
@@ -64,10 +70,10 @@ export default function About() {
                   Contact Us
                 </a>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

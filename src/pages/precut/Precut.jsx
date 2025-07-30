@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { productsS } from "../../constant/products";
 import Card from "../window/Card";
+import { Helmet } from "react-helmet";
 
 export default function Precut() {
   const [filterType, setFilterType] = useState("tan");
@@ -13,6 +14,16 @@ export default function Precut() {
 
   return (
     <div className="pt-[30px] px-4">
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>Precut Tanirovka | Eng yaxshi narxlarda oynalar uchun tayyor plyonkalar</title>
+        <meta
+          name="description"
+          content="Avtomobillar uchun precut tanirovka va quyoshdan himoya qiluvchi oynalar. Eng yaxshi narx, yuqori sifat va tez yetkazib berish xizmati."
+        />
+        <link rel="canonical" href="https://tanirovka.uz/precut" />
+      </Helmet>
+
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-[30px]">
 
@@ -20,7 +31,7 @@ export default function Precut() {
           <div className="w-full lg:w-[20%]">
             <p className="text-sm text-gray-700 mb-4">
               <Link to="/" className="text-blue-600 hover:underline">Home</Link> {" > "}
-              <span className="text-gray-500">Window Tint Rolls</span>
+              <span className="text-gray-500">Precut Window Films</span>
             </p>
 
             {/* Filter UI */}
@@ -46,7 +57,6 @@ export default function Precut() {
               >
                 сонса зашита
               </button>
-              {/* Yana boshqa turlar qo‘shish mumkin */}
             </div>
           </div>
 

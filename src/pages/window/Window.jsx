@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Card from "./Card";
 import { productsS } from "../../constant/products";
 
@@ -13,6 +14,20 @@ export default function Window() {
 
   return (
     <div className="pt-[30px] px-4">
+      <Helmet>
+        <title>Tanirovka plyonka rulonlari | Tanirovka.uz</title>
+        <meta
+          name="description"
+          content="Avtomobil va bino oynalari uchun sifatli tanirovka plyonkalari. Quyoshdan himoya qiluvchi, turli o'lcham va turlardagi rulonlar – bizda eng arzon narxlarda!"
+        />
+        <meta
+          name="keywords"
+          content="tanirovka, plyonka, oynaga plyonka, quyoshdan himoya, rulon, oynaga qoraytiruvchi plyonka, window tint rolls, sonza zashita"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://tanirovka.uz/window" />
+      </Helmet>
+
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-[30px]">
 
@@ -46,7 +61,6 @@ export default function Window() {
               >
                 сонса зашита
               </button>
-              {/* Yana boshqa turlar qo‘shish mumkin */}
             </div>
           </div>
 

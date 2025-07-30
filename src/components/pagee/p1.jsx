@@ -1,8 +1,31 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const P1 = () => {
     return (
         <div>
+            {/* SEO Meta Tags */}
+            <Helmet>
+                <title>Buyurtma Qabul Qiluvchilar | Tonirovka.uz</title>
+                <meta
+                    name="description"
+                    content="O‘zbekiston bo‘ylab tonirovka xizmatlariga buyurtma bering! Toshkent, Andijon, Namangan va boshqa viloyatlar uchun aloqa ma'lumotlari va xizmatlar."
+                />
+                <meta
+                    name="keywords"
+                    content="tonirovka, buyurtma, xizmat, Toshkent, Andijon, tonirovka ustasi, bron plyonka, laminatsiya, detailing"
+                />
+                <meta name="author" content="Tonirovka.uz" />
+                <meta property="og:title" content="Buyurtma Qabul Qiluvchilar | Tonirovka.uz" />
+                <meta
+                    property="og:description"
+                    content="Eng yaxshi tonirovka ustalari va buyurtma qabul qiluvchilar ro'yxati. Manzillar, telefon raqamlari va xizmat turlari."
+                />
+                <meta property="og:url" content="https://tanirovka.uz/order" />
+                <meta property="og:type" content="website" />
+            </Helmet>
+
+            {/* Page Content */}
             <div className="bg-white text-black p-6 space-y-6">
                 <h2 className="text-2xl font-bold text-center text-blue-700">📦 Buyurtma Qabul Qiluvchilar</h2>
 
@@ -22,7 +45,6 @@ const P1 = () => {
                     <h3 className="text-xl font-semibold text-green-700">🧰 Tonirovka Ustasi – Toshkent</h3>
 
                     <div className="md:flex md:justify-between md:items-start gap-4">
-                        {/* Usta ma'lumotlari */}
                         <div className="md:w-1/2">
                             <p>👨‍🔧 Umar: <strong>99-444-48-35</strong></p>
                             <p>📍 Manzil: Qushbegi 17</p>
@@ -42,9 +64,8 @@ const P1 = () => {
                             </ul>
                         </div>
 
-                        {/* Tijorat direktori ma'lumotlari */}
                         <div className="md:w-1/2 mt-4 md:mt-0 border-l md:pl-4">
-                            <h4 className="text-md font-semibold text-purple-700">🏢 Tijorat direktori</h4>
+                            <h4 className="text-xl font-semibold text-green-700">🏢 Tijorat direktori</h4>
                             <p>👤 Qahramon Yusupov</p>
                             <p>📞 <strong>+998 95 880 35 33</strong></p>
                         </div>
