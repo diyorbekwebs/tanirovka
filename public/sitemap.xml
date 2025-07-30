@@ -6,12 +6,12 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://tanirovka.uz/fitting</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://tanirovka.uz/precut</loc>
     <lastmod>2025-07-29</lastmod>
