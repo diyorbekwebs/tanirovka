@@ -1,15 +1,8 @@
 /* eslint-disable react/jsx-key */
 import { Link } from "react-router-dom";
 import { category } from "../../constant/category";
-import { motion } from "framer-motion";
-import "react-animation/dist/keyframes.css";
 
 export default function Products() {
-  const animationVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-  };
-
   return (
     <section className="pt-[100px] pb-[150px]" aria-labelledby="product-heading">
       <div className="container">
@@ -21,13 +14,7 @@ export default function Products() {
             Our Product Ranges
           </h1>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.5 }}
-            variants={animationVariants}
-            className="flex justify-between items-center w-full"
-          >
+          <div className="flex justify-between items-center w-full">
             <div className="max-w-[1280px] mx-auto px-4 py-10">
               <div
                 className="flex flex-wrap justify-center gap-6"
@@ -58,7 +45,8 @@ export default function Products() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
+
         </div>
       </div>
     </section>

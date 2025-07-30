@@ -10,9 +10,11 @@
   list-style: none;
   /* cursor:none; */
 }
+
 body {
   overflow-x: hidden;
 }
+
 /* Scrollbar uchun rang o'zgartirish */
 ::-webkit-scrollbar {
   width: 0px;
@@ -30,18 +32,32 @@ body {
   border: 0px solid;
   overflow: hidden;
 }
+
 .hero {
   background-image: url("./assets/image/slide/sl6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   height: 100vh;
 }
+
+
+@media (max-width: 768px) {
+  .hero {
+    background-position: top center;
+    height: 100vh;
+  }
+}
+
+
 .container {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
 }
+
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -49,9 +65,11 @@ body {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: translateY(-10px);
   }
@@ -70,8 +88,10 @@ body {
   font-size: 16px;
   z-index: 1000;
   animation: bounce 2s infinite;
-  box-shadow: 0px 0px 30px rgb(255, 94, 0); /* Soya qo'shish */
-  transition: box-shadow 0.3s ease; /* Cheksiz qalqish effekti */
+  box-shadow: 0px 0px 30px rgb(255, 94, 0);
+  /* Soya qo'shish */
+  transition: box-shadow 0.3s ease;
+  /* Cheksiz qalqish effekti */
 }
 
 .call-button:hover {
@@ -80,5 +100,5 @@ body {
 
 .logo {
   height: 90px;
-  
+
 }

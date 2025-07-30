@@ -31,8 +31,8 @@ export default function Footer() {
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-semibold">Contact</h3>
           <ul className="text-sm text-gray-300 space-y-1">
-            <li>Email: support@offroadx.com</li>
-            <li>Phone: +998 90 123 45 67</li>
+            <li>Email: qahramonyusupov880@gmail.com</li>
+            <li>Phone: +998 95 880 35 33</li>
             <li>Location: Tashkent, Uzbekistan</li>
           </ul>
         </div>

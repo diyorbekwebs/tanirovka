@@ -27,10 +27,10 @@ export default function Video() {
       <div className="container px-4">
         <div className="flex flex-col gap-[50px]">
           <header>
-            <h1 id="video-guide-heading" className="text-[28px] md:text-[32px] font-[700] leading-snug">
+            <h1 id="video-guide-heading" className="text-[28px] md:text-[32px] font-bold leading-snug">
               Save Time and Money With Our Pre-Cut Window Tint Kits
             </h1>
-            <p className="text-[16px] md:text-[18px] font-[400] mt-2">
+            <p className="text-[16px] md:text-[18px] font-normal mt-2">
               If you're new to this, we recommend taking a look at our fitting videos.
             </p>
           </header>
@@ -66,7 +66,7 @@ export default function Video() {
                     loading="lazy"
                   />
                   <div className="flex flex-col gap-[8px] w-full">
-                    <h4 className="text-[18px] md:text-[20px] font-[700] leading-tight">
+                    <h4 className="text-[18px] md:text-[20px] font-bold leading-tight">
                       <span className="text-[#5db3ef] mr-1">{item.step}</span>
                       {item.title}
                     </h4>

@@ -1,10 +1,4 @@
-import { motion } from "framer-motion";
 import { Windowtint, Windowtint2 } from "../../assets/image/img";
-
-const animationVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
 
 const sections = [
   {
@@ -40,12 +34,8 @@ export default function About() {
         <h2 id="about-heading" className="sr-only">About Our Vehicles</h2>
         <div className="flex flex-col gap-[80px]">
           {sections.map((section, index) => (
-            <motion.article
+            <article
               key={index}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ amount: 0.5 }}
-              variants={animationVariants}
               className={`flex flex-col-reverse ${section.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
                 } justify-between items-center gap-8`}
               aria-label={section.title}
@@ -70,7 +60,7 @@ export default function About() {
                   Contact Us
                 </a>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>

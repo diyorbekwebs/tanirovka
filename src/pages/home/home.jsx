@@ -23,7 +23,7 @@ export default function Home() {
       <SlideVideo />
       <Collection />
       <P1></P1>
-      <P2></P2>
+      {/* <P2></P2> */}
     </>
   );
 }
