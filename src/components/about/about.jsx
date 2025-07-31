@@ -3,35 +3,36 @@ import { Windowtint, Windowtint2 } from "../../assets/image/img";
 const sections = [
   {
     image: Windowtint,
-    title: "Explore and Achieve Your Freedom",
+    title: "Avtomobilingizga uslub va himoya qo‘shing",
     description:
-      "Experience the thrill of exploration with our premium off-road vehicles. Whether you crave the wilderness or the dunes, we've got your ride.",
+      "Bizning sifatli oynalarni qoplash xizmatlarimiz orqali avtomobilingizga zamonaviy ko‘rinish, quyoshdan himoya va maxfiylikni ta’minlang.",
     reverse: false,
-    alt: "Off-road vehicle in wilderness",
+    alt: "Tanirovka qilingan avtomobil",
   },
   {
     image: Windowtint2,
-    title: "Built for Every Terrain",
+    title: "Issiqlikka qarshi samarali yechim",
     description:
-      "Our fleet is designed to handle extreme conditions. From rocky paths to desert sands, drive with confidence and style.",
+      "Biz taklif qilayotgan oynalarni qoplash xizmatlari sizning avtomobilingiz ichki haroratini pasaytirishga va salondagi jihozlarni quyosh nurlaridan asrashga yordam beradi.",
     reverse: true,
-    alt: "Vehicle crossing a rocky terrain",
+    alt: "Avtomobil oynasi oynavand qilingan",
   },
   {
     image: Windowtint,
-    title: "Ready When You Are",
+    title: "Ishonchli xizmat va professional yondashuv",
     description:
-      "Take control of your journey with reliable, adventure-ready vehicles. We're here to power your next escape.",
+      "Biz sizga tajribali mutaxassislar, sifatli materiallar va kafolatli xizmatni taklif qilamiz. Tanirovka – bu nafaqat chiroy, balki xavfsizlik hamdir.",
     reverse: false,
-    alt: "Adventure-ready SUV on a dirt road",
+    alt: "Ustaxonada oynasi qoplanayotgan mashina",
   },
 ];
+
 
 export default function About() {
   return (
     <section className="bg-white pt-[50px] pb-[100px]" aria-labelledby="about-heading">
       <div className="container mx-auto px-4">
-        <h2 id="about-heading" className="sr-only">About Our Vehicles</h2>
+        <h2 id="about-heading" className="sr-only">Biz haqimizda</h2>
         <div className="flex flex-col gap-[80px]">
           {sections.map((section, index) => (
             <article
@@ -50,14 +51,14 @@ export default function About() {
                 <h3 className="text-[#1c1c1c] text-[28px] sm:text-[32px] lg:text-[34px] font-bold leading-snug">
                   {section.title}
                 </h3>
-                <p className="text-[#4a4a4a] text-[15px] sm:text-[16px] font-[400] leading-[1.6]">
+                <p className="text-[#444] text-[15px] sm:text-[16px] font-[400] leading-[1.7]">
                   {section.description}
                 </p>
                 <a
-                  href="tel:+998994444835"
-                  className="text-[14px] font-[600] text-white bg-[#0073ff] px-[24px] py-[12px] rounded-[8px] w-fit mx-auto lg:mx-0 hover:bg-[#005acc] transition"
+                  href="tel:+998958803533"
+                  className="text-[14px] font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 px-[26px] py-[12px] rounded-[10px] shadow-md w-fit mx-auto lg:mx-0 hover:opacity-90 transition-all duration-300"
                 >
-                  Contact Us
+                  Biz bilan bog‘laning
                 </a>
               </div>
             </article>

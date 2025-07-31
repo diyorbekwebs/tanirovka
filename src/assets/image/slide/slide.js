@@ -34,4 +34,4 @@ export const slideimages = [
     Sl21, Sl22, Sl23, Sl24, Sl25
 ];
 
-export { Sl10, Sl7 }
+export { Sl1,Sl5,Sl6,Sl10, Sl7 }

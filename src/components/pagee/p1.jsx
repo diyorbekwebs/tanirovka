@@ -28,15 +28,15 @@ const P1 = () => {
       {/* Page Content */}
       <div className="bg-white text-black p-6 space-y-6">
         <h2 className="text-2xl font-bold text-center text-blue-700">
-          📦 O‘zbekiston Respublikasi bo‘yicha savdo nuqtalari
+          📦 Savdo nuqtalari
         </h2>
 
         {/* Toshkent – Savdo nuqtalari */}
         {/* Toshkent – Sergeli bozor – Omonjon va Obidjon */}
         {/* Toshkent – Sergeli bozor – Omonjon va Obidjon */}
         <div className="border p-4 rounded-xl shadow space-y-4">
-          {/* <h3 className="text-xl font-semibold text-red-600 mb-2">📍 Toshkent shahri – Sergeli bozori</h3> */}
-
+          {/* <h3 className="text-xl font-semibold text-[#000] mb-2">📍 Toshkent shahri – Sergeli bozori</h3> */}
+          <h3 className="text-xl font-semibold text-[#000]">📍 O'zbekiston bo'ylab</h3>
           <div className="flex flex-col md:flex-row gap-4">
             {/* Omonjon */}
             <div className="bg-gray-50 p-4 rounded-lg flex-1 space-y-1">
@@ -60,7 +60,7 @@ const P1 = () => {
 
         {/* Fargʻona vodiysi */}
         <div className="border p-4 rounded-xl shadow space-y-2">
-          <h3 className="text-xl font-semibold text-red-600">📍 Farg‘ona, Andijon, Namangan</h3>
+          <h3 className="text-xl font-semibold text-[#000]">📍 Farg‘ona, Andijon, Namangan</h3>
           <p>👤 Oybekjon</p>
           <p>📞 <strong>+998 77 404 35 33</strong></p>
           <p>💬 Telegram: <a href="https://t.me/DAC_KOKAND" className="text-blue-600 underline">@DAC_KOKAND</a></p>
@@ -71,7 +71,7 @@ const P1 = () => {
         <div className="flex flex-col md:flex-row gap-4">
           {/* Detailing – Toshkent */}
           <div className="border p-4 rounded-xl shadow flex-1 space-y-4">
-            <h3 className="text-xl font-semibold text-green-700">🧰 Toshkent Detailing xizmati</h3>
+            <h3 className="text-xl font-semibold text-[#000]">🧰 Toshkent Detailing xizmati</h3>
             <div className="space-y-2 text-sm">
               <p>👨‍🔧 Umarbek</p>
               <p>📞 <strong>+998 99 444 48 35</strong></p>
@@ -97,7 +97,7 @@ const P1 = () => {
 
           {/* Tijorat Direktori */}
           <div className="border p-4 rounded-xl shadow flex-1 space-y-2">
-            <h4 className="text-xl font-semibold text-green-700">🏢 Tijorat Direktori</h4>
+            <h4 className="text-xl font-semibold text-[#000]">🏢 Tijorat Direktori</h4>
             <p>👤 Qahramon Yusupov</p>
             <p>📞 <strong>+998 95 880 35 33</strong></p>
             <p>

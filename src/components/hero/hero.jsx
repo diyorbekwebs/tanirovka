@@ -1,22 +1,77 @@
+import { useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { ChevronLeft, ChevronRight } from "lucide-react"; // yoki icon kerak bo‘lsa
+import { Sl1, Sl10, Sl5, Sl6, Sl7 } from "../../assets/image/slide/slide";
+
 export default function Hero() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const swiperRef = useRef(null);
+
+
+  const slideImages = [
+    Sl1, Sl5, Sl6, Sl10, Sl7
+  ]
+  const titles = ["Новый HAVAL Dargo", "Новый HAVAL D", "Новый HAVAL aa"];
+
+  useEffect(() => {
+    if (
+      swiperRef.current &&
+      swiperRef.current.swiper &&
+      prevRef.current &&
+      nextRef.current
+    ) {
+      swiperRef.current.swiper.params.navigation.prevEl = prevRef.current;
+      swiperRef.current.swiper.params.navigation.nextEl = nextRef.current;
+      swiperRef.current.swiper.navigation.init();
+      swiperRef.current.swiper.navigation.update();
+    }
+  }, []);
+
   return (
-    <div className="bg-gradient-to-br w-full from-[#001F3F] to-[#0073ff] text-white py-16 md:py-24 hero">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-20">
-        <div className="flex flex-col items-start justify-center min-h-[60vh] md:min-h-[80vh] gap-6 sm:gap-8 lg:gap-10">
-          {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-xl sm:max-w-2xl lg:max-w-4xl">
-            Get Ready for an Awesome <br /> Adventure
-          </h1>
+    <div className="relative w-full h-[90vh]">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 4000 }}
+        loop={true}
+        className="w-full h-full"
+        ref={swiperRef}
+      >
+        {slideImages.map((imgSrc, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className="relative w-full h-full bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${imgSrc})`,
+              }}
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-          <p className="text-sm sm:text-base md:text-lg font-medium max-w-md sm:max-w-xl lg:max-w-2xl opacity-90">
-            We are a company that builds high-quality all-terrain vehicles
-            with an emphasis on power, safety, and performance.
-          </p>
-
-          <button className="bg-white text-[#0073ff] text-sm md:text-base font-bold px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-lg shadow-lg transition duration-300 hover:bg-[#e0eaff] hover:scale-105">
-            See Catalogue
-          </button> */}
-        </div>
+      {/* Custom navigation arrows */}
+      <div className="absolute right-6 bottom-6 z-50 flex gap-4">
+        <button
+          ref={prevRef}
+          className="w-10 h-10 border border-white flex items-center justify-center hover:bg-black hover:text-white transition"
+        >
+          <ChevronLeft color="white" size={24} />
+        </button>
+        <button
+          ref={nextRef}
+          className="w-10 h-10 border border-white flex items-center justify-center hover:bg-black hover:text-white transition"
+        >
+          <ChevronRight color="white" size={24} />
+        </button>
       </div>
     </div>
   );
+
 }
