@@ -17,7 +17,7 @@ function App() {
         <meta name="description" content="Toshkentdagi eng yaxshi avtomobil oynalarini qoraytirish xizmati." />
       </Helmet>
       <ScrollToTop />
-      <Cursor size={50} color="#0073ff" hollow={true} />
+      {/* <Cursor size={50} color="#0073ff" hollow={true} /> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
