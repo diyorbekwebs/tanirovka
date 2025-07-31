@@ -7,9 +7,12 @@ import "./i18.js"
 import "swiper/css";
 import "swiper/css/parallax";
 import { BrowserRouter } from "react-router-dom";
+import ScrollToHashElement from "./scrollhash.js";
+
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
+    <ScrollToHashElement />
     <App />
   </BrowserRouter>
 );

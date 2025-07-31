@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   const headerClass = isScrolled || !isHome
-    ? "bg-white text-black shadow-sm border-gray-200"
+    ? "bg-white  text-black shadow-sm border-gray-200"
     : "bg-white/20 text-white border-white/10 backdrop-blur-md";
 
   const menuBgClass = isScrolled || !isHome
@@ -33,9 +33,9 @@ export default function Header() {
         <nav className="flex items-center justify-between h-[80px] relative">
           {/* Chap menyular */}
           <ul className="hidden md:flex gap-6 items-center text-sm font-medium">
-            <li><Link to="/" className="hover:underline">Bosh sahifa</Link></li>
-            <li><Link to="/products" className="hover:underline">Maxsulotlar</Link></li>
-            <li><Link to="/contact" className="hover:underline">Kontaktlar</Link></li>
+            <li><Link to="/#hero" className="hover:underline">Bosh sahifa</Link></li>
+            <li><Link to="/precut" className="hover:underline">Maxsulotlar</Link></li>
+            <li><Link to="/#contact" className="hover:underline">Kontaktlar</Link></li>
           </ul>
 
           {/* Logo */}
@@ -47,9 +47,9 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-5 text-sm">
             <a href="tel:+998958803533" className="hover:text-gray-500 transition">📞 +998 95 880 35 33</a>
             <div className="flex gap-3 items-center">
-              <a href="https://t.me/yourchannel" target="_blank"><img src={Telegram} alt="Telegram" className="h-5" /></a>
-              <a href="https://instagram.com/yourpage" target="_blank"><img src={Instagram} alt="Instagram" className="h-5" /></a>
-              <a href="https://facebook.com/yourpage" target="_blank"><img src={Facebook} alt="Facebook" className="h-5" /></a>
+              <a href="https://t.me/@X99PROUZBEKISTAN" target="_blank"><img src={Telegram} alt="Telegram" className="h-5" /></a>
+              <a href="https://www.instagram.com/x99pro_uzbekista" target="_blank"><img src={Instagram} alt="Instagram" className="h-5" /></a>
+              <a href="https://facebook.com/x99pro_uzbekistan" target="_blank"><img src={Facebook} alt="Facebook" className="h-5" /></a>
             </div>
             <div className="relative group">
               <button className="flex items-center gap-1 hover:text-gray-500">UZ <span>▾</span></button>
@@ -78,14 +78,14 @@ export default function Header() {
               className={`md:hidden overflow-hidden px-4 py-4 rounded-b-lg shadow ${menuBgClass}`}
             >
               <div className="flex flex-col gap-4 text-base font-medium">
-                <Link to="/" onClick={() => setIsMenuOpen(false)}>Bosh sahifa</Link>
-                <Link to="/products" onClick={() => setIsMenuOpen(false)}>Maxsulotlar</Link>
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Kontaktlar</Link>
+                <Link to="/#hero" onClick={() => setIsMenuOpen(false)}>Bosh sahifa</Link>
+                <Link to="/precut" onClick={() => setIsMenuOpen(false)}>Maxsulotlar</Link>
+                <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>Kontaktlar</Link>
                 <a href="tel:+998958803533">📞 +998 95 880 35 33</a>
                 <div className="flex gap-4 mt-2">
-                  <a href="https://t.me/yourchannel"><img src={Telegram} className="h-5" /></a>
-                  <a href="https://instagram.com/yourpage"><img src={Instagram} className="h-5" /></a>
-                  <a href="https://facebook.com/yourpage"><img src={Facebook} className="h-5" /></a>
+                  <a href="https://t.me/@X99PROUZBEKISTAN"><img src={Telegram} className="h-5" /></a>
+                  <a href="https://www.instagram.com/x99pro_uzbekistan"><img src={Instagram} className="h-5" /></a>
+                  <a href="https://facebook.com/x99pro_uzbekistan"><img src={Facebook} className="h-5" /></a>
                 </div>
                 <div className="flex gap-4 mt-2">
                   <button>UZ</button>

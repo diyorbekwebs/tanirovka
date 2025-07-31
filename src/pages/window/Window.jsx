@@ -13,7 +13,7 @@ export default function Window() {
       : productsS.filter((product) => product.type === filterType);
 
   return (
-    <div className="pt-[30px] px-4">
+    <div className="pt-[30px] px-4 mt-[100px]">
       <Helmet>
         <title>Tanirovka plyonka rulonlari | Tanirovka.uz</title>
         <meta

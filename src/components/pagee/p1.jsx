@@ -26,7 +26,7 @@ const P1 = () => {
       </Helmet>
 
       {/* Page Content */}
-      <div className="bg-white text-black p-6 space-y-6">
+      <div id='contact' className="bg-white text-black p-6 space-y-6">
         <h2 className="text-2xl font-bold text-center text-blue-700">
           📦 Savdo nuqtalari
         </h2>

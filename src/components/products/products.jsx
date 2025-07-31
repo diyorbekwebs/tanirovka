@@ -4,9 +4,9 @@ import { category } from "../../constant/category";
 
 export default function Products() {
   return (
-    <section className="pt-[100px] pb-[150px]" aria-labelledby="product-heading">
+    <section className="pt-[100px] pb-[70px]" aria-labelledby="product-heading">
       <div className="container">
-        <div className="flex pl-[20px] justify-center items-center flex-col gap-[50px]">
+        <div className="flex pl-[20px] justify-center items-center flex-col">
           <h1
             id="product-heading"
             className="text-[32px] font-bold text-center text-[#333]"

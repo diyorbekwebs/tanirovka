@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 
 export default function Paint() {
   return (
-    <div className="pt-[30px]">
+    <div className="pt-[30px] mt-[100px]">
       <Helmet>
         <title>Pre Cut Tanirovka Rullari | Tanirovka.uz</title>
         <meta

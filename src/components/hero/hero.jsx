@@ -33,7 +33,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative w-full h-[90vh]">
+    <div id="#hero" className="relative w-full h-[90vh]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         pagination={{ clickable: true }}

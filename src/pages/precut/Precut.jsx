@@ -13,7 +13,7 @@ export default function Precut() {
       : productsS.filter((product) => product.type === filterType);
 
   return (
-    <div className="pt-[30px] px-4">
+    <div className="pt-[30px] px-4 mt-[100px]">
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Precut Tanirovka | Eng yaxshi narxlarda oynalar uchun tayyor plyonkalar</title>
