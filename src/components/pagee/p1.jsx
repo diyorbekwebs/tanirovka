@@ -68,40 +68,44 @@ const P1 = () => {
         </div>
 
         {/* Detailing – Toshkent */}
-        <div className="border p-4 rounded-xl shadow space-y-4">
-          <h3 className="text-xl font-semibold text-green-700">🧰 Toshkent Deteiling xizmati</h3>
-
-          <div className="md:flex md:justify-between md:items-start gap-4">
-            {/* Usta */}
-            <div className="md:w-1/2 space-y-2">
+        <div className="flex flex-col md:flex-row gap-4">
+          {/* Detailing – Toshkent */}
+          <div className="border p-4 rounded-xl shadow flex-1 space-y-4">
+            <h3 className="text-xl font-semibold text-green-700">🧰 Toshkent Detailing xizmati</h3>
+            <div className="space-y-2 text-sm">
               <p>👨‍🔧 Umarbek</p>
               <p>📞 <strong>+998 99 444 48 35</strong></p>
-              <p>📍 Manzil: Yakkasaroy tumani, Qushbegi 17 (mo‘ljal: qarsillama somsani oldidagi moyka)</p>
-              <p>🗺 <a
-                href="https://yandex.uz/maps/-/CDbKMFSd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline"
-              >
-                X99 PRO DETAILING (xaritada ochish)
-              </a></p>
-              <ul className="list-disc list-inside text-sm text-gray-700">
+              <p>📍 Yakkasaroy tumani, Qushbegi 17 (mo‘ljal: qarsillama somsani oldidagi moyka)</p>
+              <p>
+                🗺 <a
+                  href="https://yandex.uz/maps/-/CDbKMFSd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline"
+                >
+                  X99 PRO DETAILING (xaritada ochish)
+                </a>
+              </p>
+              <ul className="list-disc list-inside text-gray-700">
                 <li>Tanirovka</li>
                 <li>Laminatsiya</li>
                 <li>Bron plyonka</li>
                 <li>Polirovka (Ceramica)</li>
               </ul>
             </div>
+          </div>
 
-            {/* Direktor */}
-            <div className="md:w-1/2 mt-4 md:mt-0 border-l md:pl-4 space-y-2">
-              <h4 className="text-xl font-semibold text-green-700">🏢 Tijorat Direktori</h4>
-              <p>👤 Qahramon Yusupov</p>
-              <p>📞 <strong>+998 95 880 35 33</strong></p>
-              <p>💬 Telegram: <a href="https://t.me/qahramonyusuf" className="text-blue-600 underline">@qahramonyusuf</a></p>
-            </div>
+          {/* Tijorat Direktori */}
+          <div className="border p-4 rounded-xl shadow flex-1 space-y-2">
+            <h4 className="text-xl font-semibold text-green-700">🏢 Tijorat Direktori</h4>
+            <p>👤 Qahramon Yusupov</p>
+            <p>📞 <strong>+998 95 880 35 33</strong></p>
+            <p>
+              💬 Telegram: <a href="https://t.me/qahramonyusuf" className="text-blue-600 underline">@qahramonyusuf</a>
+            </p>
           </div>
         </div>
+
 
         {/* Vaqtlar */}
         <div className="border-t pt-4">
