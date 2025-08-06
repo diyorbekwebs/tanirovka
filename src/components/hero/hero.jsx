@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // yoki icon kerak bo‘lsa
-import { Sl1, Sl10, Sl5, Sl6, Sl7 } from "../../assets/image/slide/slide";
+import { Sl1, Sl10, Sl2, Sl5, Sl6, Sl7 } from "../../assets/image/slide/slide";
 
 export default function Hero() {
   const prevRef = useRef(null);
@@ -14,7 +14,7 @@ export default function Hero() {
 
 
   const slideImages = [
-    Sl1, Sl5, Sl6, Sl10, Sl7
+    Sl5, Sl2, Sl10, Sl7
   ]
   const titles = ["Новый HAVAL Dargo", "Новый HAVAL D", "Новый HAVAL aa"];
 

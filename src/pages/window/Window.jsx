@@ -34,8 +34,9 @@ export default function Window() {
           {/* Sidebar (Breadcrumb) */}
           <div className="w-full lg:w-[20%]">
             <p className="text-sm text-gray-700 mb-4">
-              <Link to="/" className="text-blue-600 hover:underline">Home</Link> {" > "}
-              <span className="text-gray-500">Window Tint Rolls</span>
+              <Link to="/" className="text-blue-600 hover:underline">Bosh sahifa</Link> {" > "}
+              <span className="text-gray-500">Quyoshdan himoya plyonkalari
+                </span>
             </p>
 
             {/* Filter UI */}
@@ -52,14 +53,14 @@ export default function Window() {
                 className={`block w-full text-left px-3 py-1 rounded ${filterType === "tan" ? "bg-blue-600 text-white" : "bg-gray-100"
                   }`}
               >
-                Tanirovka
+                Oynaga qoraytiruvchi plyonka
               </button>
               <button
                 onClick={() => setFilterType("sons")}
                 className={`block w-full text-left px-3 py-1 rounded ${filterType === "sons" ? "bg-blue-600 text-white" : "bg-gray-100"
                   }`}
               >
-                сонса зашита
+                Quyoshdan himoya plyonkalari
               </button>
             </div>
           </div>

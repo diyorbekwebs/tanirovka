@@ -6,6 +6,7 @@ import Telegram from "./telegram.svg";
 import Facebook from "./facebook.svg";
 import Windowtint from "./window1.jpg";
 import Windowtint2 from "./window2.jpg";
+import Windowtint3 from "./window.jpg";
 import Shadest1 from "./shades1.svg";
 import Shadest2 from "./shades2.svg";
 import Shadest3 from "./shades3.svg";
@@ -108,6 +109,7 @@ export {
   Facebook,
   Windowtint,
   Windowtint2,
+  Windowtint3,
   Shadest1,
   Shadest2,
   Shadest3,

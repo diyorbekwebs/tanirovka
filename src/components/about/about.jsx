@@ -1,4 +1,4 @@
-import { Windowtint, Windowtint2 } from "../../assets/image/img";
+import { Windowtint, Windowtint2, Windowtint3 } from "../../assets/image/img";
 
 const sections = [
   {
@@ -10,7 +10,7 @@ const sections = [
     alt: "Tanirovka qilingan avtomobil",
   },
   {
-    image: Windowtint2,
+    image: Windowtint3,
     title: "Issiqlikka qarshi samarali yechim",
     description:
       "Biz taklif qilayotgan oynalarni qoplash xizmatlari sizning avtomobilingiz ichki haroratini pasaytirishga va salondagi jihozlarni quyosh nurlaridan asrashga yordam beradi.",
@@ -18,7 +18,7 @@ const sections = [
     alt: "Avtomobil oynasi oynavand qilingan",
   },
   {
-    image: Windowtint,
+    image: Windowtint2,
     title: "Ishonchli xizmat va professional yondashuv",
     description:
       "Biz sizga tajribali mutaxassislar, sifatli materiallar va kafolatli xizmatni taklif qilamiz. Tanirovka – bu nafaqat chiroy, balki xavfsizlik hamdir.",

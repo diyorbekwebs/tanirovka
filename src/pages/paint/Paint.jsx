@@ -24,8 +24,8 @@ export default function Paint() {
           {/* Chap panel: Breadcrumb */}
           <div className="w-full lg:w-[20%]">
             <p className="text-sm text-gray-700">
-              <Link to="/" className="text-blue-600 hover:underline">Home</Link> {" > "}
-              <span className="text-gray-500">Pre Cut Window Tint</span>
+              <Link to="/" className="text-blue-600 hover:underline">Bosh sahifa</Link> {" > "}
+              <span className="text-gray-500">Bo‘yoqni himoya qiluvchi plyonkalar</span>
             </p>
           </div>
 
